@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số BMI</title>
+</head>
+<body>
+<script>
+   let weight = parseInt(prompt('Enter your weight', 'kg'));
+   let height = parseInt(prompt('Enter your height', 'm'));
+
+   bmi = weight/( height ^ 2 );
+
+   Interpretation = ( bmi < 18.5) ? 'Underweight' : (bmi < 25)? 'Normal': ( bmi < 30 )? 'Overweight':'Obese';
+
+   alert(Interpretation) ;
+
+
+
+</script>
+</body>
+</html>
