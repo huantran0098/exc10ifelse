@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img id="cat" src="cat.jpg" height="261" width="232" style="position: absolute; left: 0; top: 0;"/></body>
+
+<script>
+    function upArrowPress() {
+        var element = document.getElementById('cat')
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+
+    function doArrowPress() {
+        var element = document.getElementById('cat')
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+
+    function leArrowPress() {
+        var element = document.getElementById('cat')
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+
+    function riArrowPress() {
+        var element = document.getElementById('cat')
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+    }
+
+    function moveSelection() {
+        switch (evt.keyCode) {
+            case 37:
+                leArrowPress();
+                break;
+            case 39:
+                riArrowPress();
+                break;
+            case 38:
+                upArrowPress();
+                break;
+            case 40:
+                doArrowPress();
+                break;
+        }
+    }
+    function docReady(){
+        window.addEventListener("keydown", moveSelection);
+    }
+
+</script>
+</html>
