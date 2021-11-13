@@ -114,9 +114,12 @@
     // }
 // Bài 12
 
-    let money = +prompt('Tien cho vay hang thang') ;
+    let money = +prompt('Tien cho vay') ;
     let month = +prompt('So thang vay');
-    let tienLai =
+    let i = 1.02 ;
+
+    let tienLai = money * (1 + i)^month ;
+    alert(tienLai) ;
 </script>
 
 </body>

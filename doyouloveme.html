@@ -5,11 +5,24 @@
     <title>Do you love me ?</title>
 </head>
 <body>
-<h1>DO YOU LOVE ME?</h1>
-<button id = "yes">YES</button>
-<button id = "no" onmouseover="notNo()" style="position: relative; left: 100px"; >NO</button>
+<h1 style="position: absolute; left: 200px;top: 150px">DO YOU LOVE ME?</h1>
+
+<input type="button" value="Yes" onclick="yesClick()" style="position: relative; left: 250px;right: 200px" >
+<input type="button" id="notNo" value="No" onmouseover="noHover()" style="position: relative">
 
 <script>
+    function yesClick(){
+    alert("Yes right");
+    }
+
+function noHover() {
+    var x = Math.round(Math.random() * innerWidth)
+    var y = Math.round(Math.random() * innerHeight)
+
+    document.getElementById('notNo').style.left = x + "px";
+    document.getElementById('notNo').style.top = y + "px";
+}
+
 
 </script>
 </body>
